@@ -1,65 +1,113 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sébastien AI - Vexel World</title>
+    <title>VEXEL | Digital Empire</title>
     <style>
-        /* إعدادات لتنظيف الصفحة ومنع التمرير */
-        body, html { 
-            margin: 0; 
-            padding: 0; 
-            height: 100%; 
-            overflow: hidden; 
-            background-color: #000; 
-        }
-
-        /* شريط العودة الاحترافي */
-        .back-bar { 
-            background: #000; 
-            padding: 12px; 
-            border-bottom: 1px solid #ff8c00; 
-            text-align: center; 
-            position: relative;
-            z-index: 999;
-        }
-        .back-bar a { 
-            color: #ff8c00; 
-            text-decoration: none; 
-            font-weight: bold; 
-            font-family: sans-serif;
-            font-size: 14px;
-        }
-
-        /* حاوية الخدعة لإخفاء شعار المنصة */
-        .app-container {
-            position: absolute;
-            top: 45px; 
-            left: 0;
-            right: 0;
-            bottom: 0;
+        /* إعدادات الخلفية والخطوط */
+        body {
+            background-color: #050505;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
             overflow: hidden;
         }
 
-        iframe {
-            width: 100%;
-            height: calc(100% + 70px); 
-            margin-top: -65px; /* لسحب شريط Sekai للأعلى وإخفائه */
-            border: none;
+        /* البطاقة الرئيسية */
+        .main-card {
+            background: rgba(15, 15, 15, 0.95);
+            padding: 50px 40px;
+            border-radius: 20px;
+            border: 1px solid #ff8c00;
+            box-shadow: 0 0 40px rgba(255, 140, 0, 0.15);
+            text-align: center;
+            max-width: 450px;
+            width: 90%;
+        }
+
+        h1 {
+            color: #ff8c00;
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            text-shadow: 0 0 15px rgba(255, 140, 0, 0.5);
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #a0a0a0;
+            margin-bottom: 35px;
+            line-height: 1.8;
+            font-family: monospace;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ff8c00;
+            color: #000;
+            padding: 15px 40px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: all 0.4s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: 2px solid #ff8c00;
+        }
+
+        .btn:hover {
+            background: transparent;
+            color: #ff8c00;
+            box-shadow: 0 0 30px #ff8c00;
+            transform: translateY(-3px);
+        }
+
+        .status-container {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: #555;
+        }
+
+        .status-light {
+            width: 8px;
+            height: 8px;
+            background-color: #00ff00;
+            border-radius: 50%;
+            display: inline-block;
+            margin-left: 8px;
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.3; }
+            100% { opacity: 1; }
         }
     </style>
 </head>
 <body>
 
-    <div class="back-bar">
-        <a href="index.html">← العودة لإمبراطورية VEXEL</a>
-    </div>
-
-    <div class="app-container">
-        <iframe src="https://link.prod.sekai.chat/8aQIhd"></iframe>
+    <div class="main-card">
+        <h1>VEXEL</h1>
+        <p>
+            [نظام الإشراف المركزي]<br>
+            <strong>CORE_SYSTEM: ACTIVE</strong><br>
+            <span class="status-light"></span> جميع الوحدات تعمل بكفاءة
+        </p>
+        
+        <a href="https://link.prod.sekai.chat/l1Rv3g" class="btn">الولوج إلى النظام</a>
+        
+        <div class="status-container">
+            VEXEL OS v1.0.4 | SECURE ENCRYPTED LINE
+        </div>
     </div>
 
 </body>
-                                                              </html>
-                                                              
+</html>
+
