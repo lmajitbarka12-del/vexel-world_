@@ -3,76 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مدونة Axel World - مقالات التقنية والشغف</title>
+    <title>VEXEL AI - نظام اللورد زكريا</title>
     <style>
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            line-height: 1.6; 
-            margin: 0; 
-            padding: 0; 
-            background-color: #f9f9f9; 
-            color: #333; 
-        }
-        header { 
-            background: linear-gradient(135deg, #2c3e50, #34495e); 
-            color: white; 
-            padding: 40px 20px; 
-            text-align: center; 
-        }
-        .container { 
-            max-width: 850px; 
-            margin: 30px auto; 
-            background: white; 
-            padding: 40px; 
-            border-radius: 12px; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
-        }
-        h1 { margin: 0; font-size: 2.5em; }
-        h2 { color: #2980b9; border-bottom: 2px solid #3498db; padding-bottom: 10px; margin-top: 30px; }
-        p { font-size: 1.1em; color: #555; }
-        .back-link { 
-            display: inline-block; 
-            margin-top: 20px; 
-            text-decoration: none; 
-            color: #3498db; 
-            font-weight: bold; 
-        }
-        .footer { 
-            text-align: center; 
-            padding: 20px; 
-            font-size: 0.9em; 
-            color: #888; 
-        }
+        body { background-color: #05080a; color: white; font-family: 'Segoe UI', sans-serif; margin: 0; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+        .container { background: #0b1219; border: 2px solid #00d2ff; padding: 40px; border-radius: 25px; box-shadow: 0 0 30px rgba(0, 210, 255, 0.3); width: 90%; max-width: 500px; text-align: center; }
+        h1 { color: #00d2ff; text-shadow: 0 0 10px #00d2ff; font-size: 2.5rem; margin-bottom: 10px; }
+        .status { color: #00ff88; font-size: 0.9rem; margin-bottom: 25px; display: flex; align-items: center; justify-content: center; gap: 8px; }
+        .status::before { content: ""; width: 8px; height: 8px; background: #00ff88; border-radius: 50%; box-shadow: 0 0 10px #00ff88; }
+        input { width: 100%; padding: 15px; border-radius: 12px; border: 1px solid #333; background: #05080a; color: white; font-size: 1rem; box-sizing: border-box; outline: none; margin-bottom: 20px; }
+        .btn-ai { background: #00d2ff; color: #05080a; border: none; padding: 15px 30px; border-radius: 12px; font-weight: bold; font-size: 1.1rem; cursor: pointer; width: 100%; transition: 0.3s; }
+        .btn-ai:hover { background: #0088aa; transform: scale(1.02); }
+        .back-link { display: block; margin-top: 25px; color: #888; text-decoration: none; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>مدونة Axel World</h1>
-    <p>مساحتك الخاصة لاستكشاف عالم البرمجة والاستثمار</p>
-</header>
+    <div class="container">
+        <h1>VEXEL AI</h1>
+        <div class="status">النظام متصل وجاهز للعمل</div>
+        
+        <p style="color: #ccc; margin-bottom: 20px;">مرحباً بك في بوابة الذكاء الاصطناعي. أدخل سؤالك أو طلبك البرمجي أدناه:</p>
 
-<div class="container">
-    <h2>كيف تبدأ رحلتك في برمجة التطبيقات: دليل الشباب الطموح</h2>
-    
-    <p>في عالمنا اليوم، لم تعد البرمجة مجرد مهارة تقنية، بل أصبحت لغة العصر وأداة لتحويل الأفكار إلى واقع ملموس. إذا كان لديك الشغف والابتكار، يمكنك بناء تطبيقات مذهلة وأنت لا تزال في مقتبل العمر.</p>
+        <input type="text" placeholder="اكتب سؤالك هنا يا لورد...">
 
-    <h3>1. لماذا تبدأ الآن؟</h3>
-    <p>البداية المبكرة تمنحك ميزة تنافسية كبيرة. البرمجة تعلمك التفكير المنطقي وحل المشكلات، وهي المهارات الأساسية التي يحتاجها أي رائد أعمال ناجح في المستقبل، خاصة في مجالات الاستثمار والتقنية.</p>
+        <button class="btn-ai" onclick="alert('جاري معالجة الطلب في نظام VEXEL...')">إرسال الطلب</button>
 
-    <h3>2. كيف تحول شغفك إلى واقع؟</h3>
-    <p>البحث عن فكرة التطبيق يبدأ من اهتماماتك الشخصية. اسأل نفسك دائماً: ما هي الأداة التي أحتاجها لزيادة إنتاجيتي أو مساعدة غيري؟ الشغف هو الوقود الذي سيجعلك تتجاوز أي تحديات برمجية تواجهك.</p>
-
-    <h3>3. نصيحة للمبدعين</h3>
-    <p>لا تتوقف عن التجربة. كل سطر برمجتي تكتبه اليوم هو استثمار في مستقبلك. سواء كنت تهتم بسكربتات الألعاب أو تطبيقات المال، الاستمرار هو سر النجاح.</p>
-
-    <hr>
-    <a href="index.html" class="back-link">← العودة إلى التطبيق الرئيسي</a>
-</div>
-
-<div class="footer">
-    © 2026 Axel World - جميع الحقوق محفوظة
-</div>
+        <a href="index.html" class="back-link">← العودة للوحة التحكم الرئيسية</a>
+    </div>
 
 </body>
 </html>
