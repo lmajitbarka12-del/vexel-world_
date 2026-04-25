@@ -1,0 +1,20 @@
+{
+  "short_name": "VEXEL",
+  "name": "VEXEL OS - Sebastien",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/lmajitbarka12-del/vexel-world_/main/icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://raw.githubusercontent.com/lmajitbarka12-del/vexel-world_/main/icon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/vexel-world_/",
+  "background_color": "#050505",
+  "display": "standalone",
+  "theme_color": "#ff8c00"
+}
