@@ -5,11 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sébastien AI - Vexel World</title>
     <style>
-        /* إعدادات تجعل التطبيق يملأ الشاشة بالكامل */
-        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background-color: #000; font-family: sans-serif; }
-        .back-bar { background: #111; padding: 10px; border-bottom: 1px solid #ff8c00; text-align: center; }
-        .back-bar a { color: #ff8c00; text-decoration: none; font-weight: bold; font-size: 14px; }
-        iframe { width: 100%; height: calc(100% - 40px); border: none; }
+        /* إعدادات لتنظيف الصفحة وإخفاء الزوائد */
+        body, html { 
+            margin: 0; 
+            padding: 0; 
+            height: 100%; 
+            overflow: hidden; 
+            background-color: #000; 
+        }
+
+        /* شريط العودة الاحترافي */
+        .back-bar { 
+            background: #000; 
+            padding: 10px; 
+            border-bottom: 1px solid #ff8c00; 
+            text-align: center; 
+            position: relative;
+            z-index: 999; /* لضمان بقائه فوق كل شيء */
+        }
+        .back-bar a { 
+            color: #ff8c00; 
+            text-decoration: none; 
+            font-weight: bold; 
+            font-family: sans-serif;
+            font-size: 14px;
+        }
+
+        /* حاوية الخدعة: تقوم بسحب التطبيق للأعلى لإخفاء إعلان المنصة */
+        .app-container {
+            position: absolute;
+            top: 40px; /* مكان شريط العودة */
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+        }
+
+        iframe {
+            width: 100%;
+            height: calc(100% + 60px); /* نزيد الطول ليعوض السحب */
+            margin-top: -55px; /* الخدعة: نسحب التطبيق للأعلى لإخفاء شريط Sekai */
+            border: none;
+        }
     </style>
 </head>
 <body>
@@ -18,7 +55,9 @@
         <a href="index.html">← العودة لإمبراطورية VEXEL</a>
     </div>
 
-    <iframe src="https://link.prod.sekai.chat/GTwo3B"></iframe>
+    <div class="app-container">
+        <iframe src="https://link.prod.sekai.chat/GTwo3B"></iframe>
+    </div>
 
 </body>
 </html>
