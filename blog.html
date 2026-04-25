@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sébastien AI - Vexel World</title>
     <style>
-        /* إعدادات لتنظيف الصفحة وإخفاء الزوائد */
+        /* إعدادات لتنظيف الشاشة ومنع التمرير الخارجي */
         body, html { 
             margin: 0; 
             padding: 0; 
@@ -14,27 +14,28 @@
             background-color: #000; 
         }
 
-        /* شريط العودة الاحترافي */
+        /* شريط العودة الاحترافي لـ VEXEL */
         .back-bar { 
             background: #000; 
-            padding: 10px; 
+            padding: 12px; 
             border-bottom: 1px solid #ff8c00; 
             text-align: center; 
             position: relative;
-            z-index: 999; /* لضمان بقائه فوق كل شيء */
+            z-index: 999;
         }
         .back-bar a { 
             color: #ff8c00; 
             text-decoration: none; 
             font-weight: bold; 
-            font-family: sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-size: 14px;
+            letter-spacing: 1px;
         }
 
-        /* حاوية الخدعة: تقوم بسحب التطبيق للأعلى لإخفاء إعلان المنصة */
+        /* حاوية الخدعة لسحب التطبيق للأعلى وإخفاء شعار المنصة */
         .app-container {
             position: absolute;
-            top: 40px; /* مكان شريط العودة */
+            top: 45px; /* مساحة شريط العودة */
             left: 0;
             right: 0;
             bottom: 0;
@@ -43,8 +44,8 @@
 
         iframe {
             width: 100%;
-            height: calc(100% + 60px); /* نزيد الطول ليعوض السحب */
-            margin-top: -55px; /* الخدعة: نسحب التطبيق للأعلى لإخفاء شريط Sekai */
+            height: calc(100% + 70px); /* تعويض الطول المفقود بسبب السحب */
+            margin-top: -65px; /* الخدعة: سحب الجزء العلوي المزعج للأعلى */
             border: none;
         }
     </style>
