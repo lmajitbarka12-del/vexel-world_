@@ -2,85 +2,129 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>VEXEL X PRO</title>
     <style>
-        /* إعدادات الشاشة البيضاء والنظيفة */
-        body { 
-            background-color: #ffffff; 
-            color: #333333; 
-            font-family: 'Segoe UI', Roboto, sans-serif;
+        /* تصميم نظيف جداً وأبيض وبدون إعلانات */
+        body, html {
             margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            font-family: 'Segoe UI', sans-serif;
+            overflow: hidden; /* يمنع التمرير غير الضروري */
+        }
+
+        /* واجهة التطبيق الرئيسية */
+        .app-container {
             display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .app-header {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #007bff;
+            letter-spacing: 2px;
+        }
+
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            text-align: center;
+            padding: 20px;
         }
 
         .main-card {
             background: #ffffff;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            border: 1px solid #f0f0f0;
-            max-width: 400px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            border: 1px solid #f5f5f5;
             width: 90%;
+            max-width: 400px;
+            text-align: center;
         }
 
-        .logo-box {
-            width: 70px;
-            height: 70px;
+        h2 { color: #333; margin-bottom: 10px; }
+        p { color: #888; line-height: 1.5; margin-bottom: 25px; }
+
+        .action-btn {
             background: #007bff;
             color: white;
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px;
-            font-weight: bold;
-            margin: 0 auto 20px;
-        }
-
-        h1 {
-            font-size: 24px;
-            margin-bottom: 10px;
-            color: #000;
-        }
-
-        p {
-            font-size: 16px;
-            color: #777;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-
-        .btn {
-            display: inline-block;
-            background: #007bff;
-            color: #ffffff;
-            padding: 14px 40px;
+            padding: 15px 40px;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
-            border-radius: 50px;
+            display: block;
             transition: 0.3s;
         }
 
-        .btn:hover {
-            background: #0056b3;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+        /* شريط التنقل السفلي الذي طلبته */
+        .nav-bar {
+            height: 65px;
+            background: #ffffff;
+            border-top: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
         }
+
+        .nav-item {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .nav-item.active { color: #007bff; }
+        
+        .circle { width: 24px; height: 24px; background: #eee; border-radius: 50%; margin-bottom: 4px; }
+        .active .circle { background: #007bff; }
     </style>
 </head>
 <body>
 
-    <div class="main-card">
-        <div class="logo-box">VX</div>
-        <h1>VEXEL X PRO</h1>
-        <p>مرحباً بكم في المنصة الرسمية لـ VEXEL X. اضغط على الزر أدناه للدخول إلى نظامك السحابي المتطور.</p>
-        
-        <a href="https://link.prod.sekai.chat/0OOy5x" class="btn">دخول التطبيق</a>
+    <div class="app-container">
+        <div class="app-header">
+            <div class="logo">VEXEL X</div>
+        </div>
+
+        <div class="content">
+            <div class="main-card">
+                <h2>نظام VEXEL المطور</h2>
+                <p>تم تفعيل النسخة الاحترافية بنجاح. استمتع بتجربة خالية من الإعلانات تماماً.</p>
+                <a href="#" class="action-btn">دخول السيرفر</a>
+            </div>
+        </div>
+
+        <nav class="nav-bar">
+            <a href="#" class="nav-item active">
+                <div class="circle"></div>
+                <span>الرئيسية</span>
+            </a>
+            <a href="#" class="nav-item">
+                <div class="circle"></div>
+                <span>البحث</span>
+            </a>
+            <a href="#" class="nav-item">
+                <div class="circle"></div>
+                <span>الملف الشخصي</span>
+            </a>
+        </nav>
     </div>
 
 </body>
