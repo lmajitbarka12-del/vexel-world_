@@ -5,85 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>VEXEL X PRO</title>
     <style>
-        /* تصميم نظيف جداً وأبيض وبدون إعلانات */
+        /* شاشة بيضاء نظيفة جداً */
         body, html {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
+            overflow: hidden;
             background-color: #ffffff;
-            font-family: 'Segoe UI', sans-serif;
-            overflow: hidden; /* يمنع التمرير غير الضروري */
+            font-family: sans-serif;
         }
 
-        /* واجهة التطبيق الرئيسية */
-        .app-container {
+        /* حاوية التطبيق */
+        .app-wrapper {
+            width: 100%;
+            height: 100%;
             display: flex;
             flex-direction: column;
-            height: 100vh;
         }
 
-        .app-header {
-            background-color: #ffffff;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        .logo {
-            font-size: 28px;
-            font-weight: bold;
-            color: #007bff;
-            letter-spacing: 2px;
-        }
-
-        .content {
+        /* إطار تشغيل التطبيق */
+        iframe {
             flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
+            width: 100%;
+            border: none;
         }
 
-        .main-card {
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            border: 1px solid #f5f5f5;
-            width: 90%;
-            max-width: 400px;
-            text-align: center;
-        }
-
-        h2 { color: #333; margin-bottom: 10px; }
-        p { color: #888; line-height: 1.5; margin-bottom: 25px; }
-
-        .action-btn {
-            background: #007bff;
-            color: white;
-            padding: 15px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            display: block;
-            transition: 0.3s;
-        }
-
-        /* شريط التنقل السفلي الذي طلبته */
+        /* شريط التنقل السفلي الذي طلبته (يبقى ثابتاً ولا يختفي) */
         .nav-bar {
-            height: 65px;
+            height: 60px;
             background: #ffffff;
-            border-top: 1px solid #f0f0f0;
+            border-top: 1px solid #eeeeee;
             display: flex;
             justify-content: space-around;
             align-items: center;
+            z-index: 9999;
         }
 
         .nav-item {
-            color: #ccc;
             text-decoration: none;
+            color: #888;
             font-size: 12px;
             display: flex;
             flex-direction: column;
@@ -91,38 +52,27 @@
         }
 
         .nav-item.active { color: #007bff; }
-        
-        .circle { width: 24px; height: 24px; background: #eee; border-radius: 50%; margin-bottom: 4px; }
-        .active .circle { background: #007bff; }
+        .dot { width: 10px; height: 10px; background: #ddd; border-radius: 50%; margin-bottom: 5px; }
+        .active .dot { background: #007bff; }
     </style>
 </head>
 <body>
 
-    <div class="app-container">
-        <div class="app-header">
-            <div class="logo">VEXEL X</div>
-        </div>
-
-        <div class="content">
-            <div class="main-card">
-                <h2>نظام VEXEL المطور</h2>
-                <p>تم تفعيل النسخة الاحترافية بنجاح. استمتع بتجربة خالية من الإعلانات تماماً.</p>
-                <a href="#" class="action-btn">دخول السيرفر</a>
-            </div>
-        </div>
+    <div class="app-wrapper">
+        <iframe src="https://link.prod.sekai.chat/0OOy5x" allowfullscreen></iframe>
 
         <nav class="nav-bar">
             <a href="#" class="nav-item active">
-                <div class="circle"></div>
+                <div class="dot"></div>
                 <span>الرئيسية</span>
             </a>
             <a href="#" class="nav-item">
-                <div class="circle"></div>
+                <div class="dot"></div>
                 <span>البحث</span>
             </a>
             <a href="#" class="nav-item">
-                <div class="circle"></div>
-                <span>الملف الشخصي</span>
+                <div class="dot"></div>
+                <span>الملف</span>
             </a>
         </nav>
     </div>
